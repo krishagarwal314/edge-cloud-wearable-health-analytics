@@ -1,7 +1,6 @@
 # Presentation & Report
 
-Owner: **Frontend, Visualisation & Documentation Lead (<Member 4>)**, with all members
-presenting their own area.
+Owner: **Rudra Srivastav (RS)**, with all members presenting their own area.
 
 ## Contents (to be added)
 
@@ -18,24 +17,24 @@ presentation/
 
 | # | Slide | Owner |
 |---|---|---|
-| 1 | Title, team, course | M4 |
-| 2 | Motivation — wearables generate data nobody uses in time | M4 |
-| 3 | Problem statement (bandwidth, latency, cost) | M4 |
-| 4 | Literature survey — what exists | M4 |
-| 5 | Research gap — what does not exist | M4 |
-| 6 | Objectives | M4 |
-| 7 | **Architecture diagram** (the anchor slide) | M1 |
-| 8 | Why serverless — Free Tier economics, the ADR table | M1 |
-| 9 | Edge tier — signal → window → TFLite → uplink policy | M3 |
-| 10 | Cloud tier — IoT Core → Lambda → DynamoDB → SNS | M2 |
-| 11 | The cascade — the core idea, with the escalation diagram | M3 |
-| 12 | Model results — PR curve, confusion matrix, quantisation delta | M3 |
-| 13 | System results — latency p50/p95, bandwidth saving, scalability | M1 |
-| 14 | Cost analysis — the $0 bill and the beyond-Free-Tier projection | M1 |
+| 1 | Title, team, course | RS |
+| 2 | Motivation — wearables generate data nobody uses in time | RS |
+| 3 | Problem statement (bandwidth, latency, cost) | RS |
+| 4 | Literature survey — what exists | RS |
+| 5 | Research gap — what does not exist | RS |
+| 6 | Objectives | RS |
+| 7 | **Architecture diagram** (the anchor slide) | KA |
+| 8 | Why serverless — Free Tier economics, the ADR table | KA |
+| 9 | Edge tier — signal → window → TFLite → uplink policy | MR |
+| 10 | Cloud tier — IoT Core → Lambda → DynamoDB → SNS | KA |
+| 11 | The cascade — the core idea, with the escalation diagram | MR |
+| 12 | Model results — PR curve, confusion matrix, quantisation delta | MR |
+| 13 | System results — latency p50/p95, bandwidth saving, scalability | KA |
+| 14 | Cost analysis — the $0 bill and the beyond-Free-Tier projection | KA |
 | 15 | **Live demo** | all |
-| 16 | Limitations and threats to validity (be honest — examiners reward this) | M4 |
-| 17 | Future work — federated learning, on-device retraining, multi-region | M3 |
-| 18 | Conclusion + references | M4 |
+| 16 | Limitations and threats to validity (be honest — examiners reward this) | RS |
+| 17 | Future work — federated learning, on-device retraining, multi-region | MR |
+| 18 | Conclusion + references | RS |
 
 ## Live Demo Script (rehearse this at least twice)
 

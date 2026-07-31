@@ -1,7 +1,7 @@
 # Frontend — Health Analytics Dashboard
 
-React 18 + Vite single-page app, hosted on **S3 + CloudFront**. Owner: **Frontend,
-Visualisation & Documentation Lead (<Member 4>)**.
+React 18 + Vite single-page app, hosted on **S3 + CloudFront**.
+Owner: **Rudra Srivastav (RS)**.
 
 ## Views
 

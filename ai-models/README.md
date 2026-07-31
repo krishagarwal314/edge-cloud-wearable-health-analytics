@@ -1,7 +1,7 @@
 # AI Models
 
 Model development, from raw physiological signals to a deployable INT8 TFLite artefact.
-Owner: **AI/ML & Edge Intelligence Lead (<Member 3>)**.
+Owner: **Monis Raza (MR)**.
 
 ## The two models
 

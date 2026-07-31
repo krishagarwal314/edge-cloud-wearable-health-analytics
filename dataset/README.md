@@ -5,7 +5,7 @@
 > with the scripts in [`ai-models/preprocessing/`](../ai-models/preprocessing/); the
 > `data/` directory is gitignored.
 
-Owner: **AI/ML & Edge Intelligence Lead (<Member 3>)**.
+Owner: **Monis Raza (MR)**.
 
 ---
 

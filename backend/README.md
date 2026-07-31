@@ -1,6 +1,6 @@
 # Backend Tier — Serverless Services
 
-All cloud-side compute. Owner: **Backend / Serverless Services Lead (<Member 2>)**.
+All cloud-side compute. Owner: **Krish Agarwal (KA)**.
 
 Every unit here is an **AWS Lambda function** — there are no always-on servers, which is
 what keeps the project inside the perpetual Free Tier.

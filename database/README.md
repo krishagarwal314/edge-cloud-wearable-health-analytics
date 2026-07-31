@@ -1,6 +1,6 @@
 # Database — DynamoDB Design
 
-Owner: **Backend / Serverless Services Lead (<Member 2>)**.
+Owner: **Krish Agarwal (KA)**.
 
 We use **Amazon DynamoDB** for the hot store and **S3** for cold/raw data. Rationale in
 [ADR-2](../docs/architecture/ARCHITECTURE.md#6-key-design-decisions-adr-summary): 25 GB of

@@ -102,15 +102,14 @@ Course: *Cloud Computing* — Semester Project
 
 ## 2. Team Members
 
-| # | Name | Roll No. | Primary Role | GitHub |
-|---|------|----------|--------------|--------|
-| 1 | _<Member 1>_ | _<Roll>_ | Cloud Infrastructure & DevOps Lead | `@<handle>` |
-| 2 | _<Member 2>_ | _<Roll>_ | Backend / Serverless Services Lead | `@<handle>` |
-| 3 | _<Member 3>_ | _<Roll>_ | AI/ML & Edge Intelligence Lead | `@<handle>` |
-| 4 | _<Member 4>_ | _<Roll>_ | Frontend, Visualisation & Documentation Lead | `@<handle>` |
+| # | Name | Reg. No. | Area of Responsibility |
+|---|------|----------|------------------------|
+| 1 | **Krish Agarwal** | 23BIT0427 | Cloud Infrastructure, DevOps, Backend & Data |
+| 2 | **Monis Raza** | 23BIT228 | AI/ML & Edge Intelligence |
+| 3 | **Rudra Srivastav** | 23BIT174 | Frontend, Visualisation & Documentation |
 
-> Replace the placeholders above before submission. Detailed task-level ownership is in
-> [`docs/WORK_DISTRIBUTION.md`](docs/WORK_DISTRIBUTION.md).
+Task-level ownership, the 12-week timeline, and the contribution ledger are in
+[`docs/WORK_DISTRIBUTION.md`](docs/WORK_DISTRIBUTION.md).
 
 ---
 

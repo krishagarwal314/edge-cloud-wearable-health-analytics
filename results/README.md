@@ -1,7 +1,7 @@
 # Results & Evaluation
 
-All measured outcomes live here. Owner: **Frontend, Visualisation & Documentation Lead
-(<Member 4>)**, with data supplied by whoever ran the experiment.
+All measured outcomes live here. Owner: **Rudra Srivastav (RS)**, with data supplied by
+whoever ran the experiment.
 
 **Rule: every number in the final report must be traceable to a file in this folder**, and
 every file must record how it was produced (command, date, commit hash, environment).
@@ -63,8 +63,8 @@ Each benchmark file follows this structure:
 
 | Experiment | Status | Owner |
 |---|---|---|
-| E1–E3 | ☐ Not started | <Member 3> |
-| E4, E6 | ☐ Not started | <Member 1> |
-| E5, E8 | ☐ Not started | <Member 3> |
-| E7 | ☐ Not started | <Member 1> |
-| E9 | ☐ Not started | <Member 3> |
+| E1–E3 | ☐ Not started | MR |
+| E4, E6 | ☐ Not started | KA |
+| E5, E8 | ☐ Not started | MR |
+| E7 | ☐ Not started | KA |
+| E9 | ☐ Not started | MR |

@@ -4,13 +4,13 @@ One file per experiment, following the template in [`../README.md`](../README.md
 
 | File | Experiment | Owner | Status |
 |---|---|---|---|
-| `model_eval.md` | E1–E3: accuracy, quantisation delta, cascade | <Member 3> | ☐ |
-| `latency.md` | E4: end-to-end and per-stage latency | <Member 1> | ☐ |
-| `bandwidth.md` | E5: uplink reduction vs. stream-everything | <Member 3> | ☐ |
-| `scalability.md` | E6: 1 → 50 → 200 devices | <Member 1> | ☐ |
-| `cost.md` | E7: actual bill + projection | <Member 1> | ☐ |
-| `resilience.md` | E8: offline buffering and replay | <Member 3> | ☐ |
-| `runs/` | Per-training-run directories: config, seed, commit, metrics | <Member 3> | ☐ |
+| `model_eval.md` | E1–E3: accuracy, quantisation delta, cascade | MR | ☐ |
+| `latency.md` | E4: end-to-end and per-stage latency | KA | ☐ |
+| `bandwidth.md` | E5: uplink reduction vs. stream-everything | MR | ☐ |
+| `scalability.md` | E6: 1 → 50 → 200 devices | KA | ☐ |
+| `cost.md` | E7: actual bill + projection | KA | ☐ |
+| `resilience.md` | E8: offline buffering and replay | MR | ☐ |
+| `runs/` | Per-training-run directories: config, seed, commit, metrics | MR | ☐ |
 
 ## Current placeholder measurement
 

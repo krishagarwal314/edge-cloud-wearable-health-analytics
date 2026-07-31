@@ -4,45 +4,61 @@
 **Course:** Cloud Computing
 **Last updated:** 2026-07-31
 
-> Replace `<Member N>` with actual names and roll numbers before submission. Keep the
-> "Status" column current — it is the single source of truth for who owns what.
-
 ---
 
-## 1. Role Summary
+## 1. Team
 
-| Member | Role | Owns these folders |
-|---|---|---|
-| **<Member 1>** | Cloud Infrastructure & DevOps Lead | `infrastructure/`, `.github/workflows/`, `docs/aws/` |
-| **<Member 2>** | Backend / Serverless Services Lead | `backend/`, `database/`, `tests/integration/` |
-| **<Member 3>** | AI/ML & Edge Intelligence Lead | `ai-models/`, `edge/`, `dataset/` |
-| **<Member 4>** | Frontend, Visualisation & Documentation Lead | `frontend/`, `docs/`, `results/`, `presentation/` |
+| # | Name | Reg. No. | Role | Code | Share |
+|---|------|----------|------|------|-------|
+| 1 | **Krish Agarwal** | 23BIT0427 | Cloud Infrastructure, DevOps, Backend & Data | `KA` | **~45 %** |
+| 2 | **Monis Raza** | 23BIT228 | AI/ML & Edge Intelligence | `MR` | ~30 % |
+| 3 | **Rudra Srivastav** | 23BIT174 | Frontend, Visualisation & Documentation | `RS` | ~25 % |
 
-Shared responsibility: code review (every PR needs one approval from a member who did not
-author it), `README.md`, and demo rehearsal.
+### Folder ownership
+
+| Member | Owns |
+|---|---|
+| **Krish Agarwal (KA)** | `infrastructure/`, `backend/`, `database/`, `.github/workflows/`, `docs/aws/`, `tests/` |
+| **Monis Raza (MR)** | `ai-models/`, `edge/`, `dataset/` |
+| **Rudra Srivastav (RS)** | `frontend/`, `docs/` (survey & report), `results/`, `presentation/` |
+
+Shared: code review (every PR needs one approval from a member who did not author it), the
+root `README.md`, and demo rehearsal.
+
+### Why the split is uneven
+
+The project has four distinct technical areas but three members, so Krish covers **two** of
+them — the cloud infrastructure tier and the backend/data tier. These are the most tightly
+coupled parts of the system: the CloudFormation template, the Lambda functions, and the
+DynamoDB schema all have to change together, so splitting them across two people would
+create constant merge friction on the same files.
+
+That gives Krish 16 of the 32 tasks; Monis and Rudra own 8 each.
 
 ---
 
 ## 2. Detailed Task Allocation
 
-### <Member 1> — Cloud Infrastructure & DevOps Lead
+### Krish Agarwal (KA) — Cloud Infrastructure, DevOps, Backend & Data
+
+**2a. Infrastructure & DevOps**
 
 | ID | Task | Deliverable | Status |
 |---|---|---|---|
 | I-1 | AWS account setup, IAM users, MFA, budget + billing alarm at $1 | Account runbook in `docs/setup/SETUP.md` | ☐ |
-| I-2 | Author SAM/CloudFormation template for the full stack | `infrastructure/cloudformation/template.yaml` | ☐ |
+| I-2 | Author the SAM/CloudFormation template for the full stack | `infrastructure/cloudformation/template.yaml` | ☐ |
 | I-3 | IoT Core: thing type, policy, X.509 certificate provisioning script | `infrastructure/scripts/provision_device.sh` | ☐ |
 | I-4 | Least-privilege IAM roles per Lambda | `docs/aws/IAM_NOTES.md` | ☐ |
 | I-5 | CI/CD: GitHub Actions with OIDC federation to AWS, `sam deploy` on merge to `main` | `.github/workflows/deploy.yml` | ☐ |
-| I-6 | CloudWatch dashboards, log-retention policies (7 days, to stay free), alarms | Dashboard JSON + screenshots in `results/` | ☐ |
+| I-6 | CloudWatch dashboards, log-retention policies (7 days), alarms | Dashboard JSON + screenshots in `results/` | ☐ |
 | I-7 | Free Tier quota tracking; weekly cost report | `docs/aws/FREE_TIER_BUDGET.md` | ☐ |
 | I-8 | S3 + CloudFront static hosting for the SPA, cache invalidation on deploy | Template section + deploy script | ☐ |
 
-### <Member 2> — Backend / Serverless Services Lead
+**2b. Backend & Data**
 
 | ID | Task | Deliverable | Status |
 |---|---|---|---|
-| B-1 | Define the telemetry message schema and validate it | `backend/common/schema.py`, `docs/architecture/API_CONTRACT.md` | ☐ |
+| B-1 | Define and validate the telemetry message schema | `backend/common/schema.py`, `docs/architecture/API_CONTRACT.md` | ☐ |
 | B-2 | `ingest_handler` Lambda: validate, normalise, fan out to DynamoDB + S3 | `backend/lambdas/ingest_handler/` | ☐ |
 | B-3 | `anomaly_processor` Lambda: cloud-side confirmation inference | `backend/lambdas/anomaly_processor/` | ☐ |
 | B-4 | `alert_dispatcher` Lambda: dedupe/debounce, publish to SNS | `backend/lambdas/alert_dispatcher/` | ☐ |
@@ -51,7 +67,10 @@ author it), `README.md`, and demo rehearsal.
 | B-7 | Cognito user pool integration + JWT authorizer wiring | Template section + `backend/api/` | ☐ |
 | B-8 | Integration tests with `moto`; load test harness | `tests/integration/` | ☐ |
 
-### <Member 3> — AI/ML & Edge Intelligence Lead
+**Also owns:** end-to-end system integration and keeping the deployed stack inside the AWS
+Free Tier.
+
+### Monis Raza (MR) — AI/ML & Edge Intelligence
 
 | ID | Task | Deliverable | Status |
 |---|---|---|---|
@@ -64,13 +83,13 @@ author it), `README.md`, and demo rehearsal.
 | M-7 | Cloud-side confirmation model (larger, non-quantised) packaged for Lambda | `ai-models/models/cloud/` | ☐ |
 | M-8 | Model evaluation: precision, recall, F1, ROC-AUC, confusion matrices | `results/benchmarks/model_eval.md` | ☐ |
 
-### <Member 4> — Frontend, Visualisation & Documentation Lead
+### Rudra Srivastav (RS) — Frontend, Visualisation & Documentation
 
 | ID | Task | Deliverable | Status |
 |---|---|---|---|
 | F-1 | React + Vite app scaffold, routing, theming (light/dark) | `frontend/` | ☐ |
 | F-2 | Cognito-backed login/logout flow | `frontend/src/services/auth.js` | ☐ |
-| F-3 | Live vitals view (HR, SpO₂, temperature) with polling/WebSocket updates | `frontend/src/pages/LiveVitals.jsx` | ☐ |
+| F-3 | Live vitals view (HR, SpO₂, temperature) with polling updates | `frontend/src/pages/LiveVitals.jsx` | ☐ |
 | F-4 | Historical trends: time-range picker, aggregate charts | `frontend/src/pages/Trends.jsx` | ☐ |
 | F-5 | Alert timeline + acknowledgement action | `frontend/src/pages/Alerts.jsx` | ☐ |
 | F-6 | Device management view (register/deactivate a device) | `frontend/src/pages/Devices.jsx` | ☐ |
@@ -81,40 +100,43 @@ author it), `README.md`, and demo rehearsal.
 
 ## 3. Timeline (12-week plan)
 
-| Week | Milestone | Lead |
+| Week | Milestone | Owner |
 |---|---|---|
-| 1 | Problem finalisation, literature survey | M4 (all contribute) |
-| 2 | Architecture design, repo scaffold, work split | All |
-| 3 | AWS account, IAM, billing alarms, IoT Core skeleton | M1 |
-| 4 | Telemetry schema + `ingest_handler` + DynamoDB tables | M2 |
-| 5 | Dataset acquisition + preprocessing pipeline | M3 |
-| 6 | Edge simulator publishing to IoT Core end-to-end | M3 + M1 |
-| 7 | Autoencoder training + quantisation | M3 |
-| 8 | Anomaly processor + SNS alerting path | M2 |
-| 9 | REST API + Cognito auth | M2 + M4 |
-| 10 | Dashboard: live view, trends, alerts | M4 |
-| 11 | Benchmarking, elasticity demo, cost analysis | M1 + M3 |
+| 1 | Problem finalisation, literature survey | RS (all contribute) |
+| 2 | Architecture design, repo scaffold, work split | KA (all contribute) |
+| 3 | AWS account, IAM, billing alarms, IoT Core skeleton | KA |
+| 4 | Telemetry schema + `ingest_handler` + DynamoDB tables | KA |
+| 5 | Dataset acquisition + preprocessing pipeline | MR |
+| 6 | Edge simulator publishing to IoT Core end-to-end | MR + KA |
+| 7 | Autoencoder training + quantisation | MR |
+| 8 | Anomaly processor + SNS alerting path | KA |
+| 9 | REST API + Cognito auth | KA + RS |
+| 10 | Dashboard: live view, trends, alerts | RS |
+| 11 | Benchmarking, elasticity demo, cost analysis | KA + MR |
 | 12 | Report, slides, demo rehearsal, submission | All |
 
 ---
 
 ## 4. Collaboration Conventions
 
-- **Branching:** `main` (protected) ← `dev` ← `feature/<member-initials>-<short-desc>`
+- **Branching:** `main` (protected) ← `dev` ← `feature/<initials>-<short-desc>`
+  (e.g. `feature/ka-ingest-lambda`, `feature/mr-autoencoder`, `feature/rs-live-vitals`)
 - **Commits:** Conventional Commits (`feat:`, `fix:`, `docs:`, `infra:`, `test:`)
 - **PRs:** must state which task ID they close; require one non-author approval
 - **Issues:** one GitHub issue per task ID above, labelled by area
 - **Stand-up:** async written update in the team channel, twice weekly
-- **Secrets:** never committed — use AWS Systems Manager Parameter Store and GitHub
-  Actions OIDC. `.env` is gitignored.
+- **Secrets:** never committed — use AWS Systems Manager Parameter Store and GitHub Actions
+  OIDC. `.env` and all certificates are gitignored.
 
 ---
 
 ## 5. Contribution Ledger (fill in before submission)
 
-| Member | Commits | PRs merged | Reviews given | Approx. contribution |
-|---|---|---|---|---|
-| <Member 1> | | | | 25 % |
-| <Member 2> | | | | 25 % |
-| <Member 3> | | | | 25 % |
-| <Member 4> | | | | 25 % |
+| Member | Reg. No. | Tasks owned | Commits | PRs merged | Reviews given | Contribution |
+|---|---|---|---|---|---|---|
+| Krish Agarwal | 23BIT0427 | 16 (I-1…I-8, B-1…B-8) | | | | **~45 %** |
+| Monis Raza | 23BIT228 | 8 (M-1…M-8) | | | | ~30 % |
+| Rudra Srivastav | 23BIT174 | 8 (F-1…F-8) | | | | ~25 % |
+
+Fill the commit/PR/review columns from GitHub Insights before submitting:
+`Insights → Contributors`.

@@ -1,6 +1,6 @@
 # Infrastructure — Infrastructure as Code
 
-Owner: **Cloud Infrastructure & DevOps Lead (<Member 1>)**.
+Owner: **Krish Agarwal (KA)**.
 
 The **entire** cloud tier is defined here. Nothing is created by clicking in the AWS
 console — if it is not in the template, it does not exist. This is what makes the project

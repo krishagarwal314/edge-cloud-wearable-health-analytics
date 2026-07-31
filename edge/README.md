@@ -1,7 +1,7 @@
 # Edge Tier
 
 Everything that runs **on the wearable gateway** (Raspberry Pi) or, for development, on a
-laptop as a simulator. Owner: **AI/ML & Edge Intelligence Lead (<Member 3>)**.
+laptop as a simulator. Owner: **Monis Raza (MR)**.
 
 ## Purpose
 
