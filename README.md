@@ -171,6 +171,11 @@ persistence, alerting, and visualisation.
 
 ## 5. Proposed Architecture / Framework
 
+![Proposed architecture](results/figures/architecture_diagram.png)
+
+<details>
+<summary>Same diagram as Mermaid source (renders natively on GitHub)</summary>
+
 ```mermaid
 flowchart LR
     subgraph EDGE["🩺 Edge Tier"]
@@ -211,6 +216,8 @@ flowchart LR
     COG -.authorizer.-> APIGW
     L1 & L2 & L3 & L4 -.-> CW
 ```
+
+</details>
 
 Full narrative, sequence diagrams, and design rationale:
 [`docs/architecture/ARCHITECTURE.md`](docs/architecture/ARCHITECTURE.md).
